@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookControl"
+        tools:targetApi="31">
+        <activity
+            android:name=".CameraViewActivity"
+            android:label="カメラ入力"
+            android:exported="false" />
+
+        <meta-data
+            android:name="androidx.camera.lifecycle.ProcessCameraProvider"
+            android:value="androidx.startup" />
+
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false"
+            android:label="書籍詳細"/>
+        <activity
+            android:name=".BookAddActivity"
+            android:exported="false"
+            android:label="書籍登録" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="書籍一覧"
+            android:theme="@style/Theme.BookControl">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

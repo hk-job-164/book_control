@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".BookAddActivity">
+
+    <TextView
+        android:id="@+id/imageUrlTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/image_view_label" />
+
+    <EditText
+        android:id="@+id/imageUrlText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/imageUrlTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="textUri"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageUrlText"
+        android:text="@string/title_label" />
+
+    <EditText
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/titleTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="text"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/authorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleText"
+        android:layout_alignParentStart="true"
+        android:text="@string/author_label" />
+
+    <EditText
+        android:id="@+id/authorText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/authorTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="text"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/releaseDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authorText"
+        android:layout_alignParentStart="true"
+        android:text="@string/release_date_label" />
+
+    <LinearLayout
+        android:id="@+id/releaseDateTextViewLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/releaseDateTextView"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/releaseDateText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:gravity="top"
+            android:inputType="text"
+            tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+        <ImageButton
+            android:id="@+id/calendarButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_calendar_month"
+            android:contentDescription="@string/please_select_date"
+            app:tint="?attr/colorPrimary" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rakutenLinkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/releaseDateTextViewLinear"
+        android:layout_alignParentStart="true"
+        android:text="@string/rakuten_url_label" />
+
+    <EditText
+        android:id="@+id/rakutenLinkText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/rakutenLinkTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="text"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rakutenLinkText"
+        android:layout_alignParentStart="true"
+        android:text="@string/price_label" />
+
+    <EditText
+        android:id="@+id/priceText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/priceTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="number"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/isbnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceText"
+        android:layout_alignParentStart="true"
+        android:text="@string/isbn_label" />
+
+    <EditText
+        android:id="@+id/isbnText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/isbnTextView"
+        android:layout_alignParentStart="true"
+        android:autofillHints=""
+        android:gravity="top"
+        android:inputType="text"
+        tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/fromIsbnButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/isbnText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        app:backgroundTint="?attr/colorSecondary"
+        android:text="@string/from_isbn"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/fromCameraButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/fromIsbnButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        app:backgroundTint="?attr/colorSecondary"
+        android:text="@string/from_camera"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/fromCameraButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/add_button_label"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Book Control</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="add_btn">add_btn</string>
+
+    <string name="title_label">タイトル</string>
+    <string name="isbn_label">ISBN</string>
+    <string name="author_label">著者</string>
+    <string name="release_date_label">発売日</string>
+    <string name="price_label">税込価格</string>
+    <string name="rakuten_url_label">楽天リンク</string>
+    <string name="image_view_label">書影URL</string>
+    <string name="add_button_label">登録</string>
+    <string name="button_date_text">----/--/--</string>
+    <string name="book_image">book image</string>
+    <string name="input_title">タイトルを入力してください</string>
+    <string name="input_isbn">ISBNを入力してください</string>
+    <string name="from_isbn">ISBNから自動入力</string>
+    <string name="base_url">https://app.rakuten.co.jp/services/api/BooksTotal/Search/20170404</string>
+    <string name="json">json</string>
+    <string name="failure">書籍情報の取得ができませんでした。</string>
+    <string name="from_camera">カメラから自動入力</string>
+    <string name="please_select_date">日付を選択してください</string>
+</resources>
