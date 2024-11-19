@@ -89,7 +89,6 @@ class CameraViewActivity : AppCompatActivity() {
         }
     }
 
-    // TODO : バーコードの検出に成功してSnackBarが出ている間は次のISBNを表示させない
     private fun callback(barcodes: List<Barcode>) {
         for (barcode in barcodes) {
             if (barcode.valueType == Barcode.TYPE_ISBN) {
@@ -97,17 +96,6 @@ class CameraViewActivity : AppCompatActivity() {
                 resultIntent.putExtra("isbn", barcode.rawValue.toString())
                 setResult(RESULT_OK, resultIntent)
                 finish()
-
-//                val snackbar = Snackbar.make(binding.root, barcode.rawValue.toString(), Snackbar.LENGTH_INDEFINITE)
-//
-//                snackbar.setAction("入力") {
-//                    val resultIntent = Intent()
-//                    resultIntent.putExtra("isbn", barcode.rawValue.toString())
-//                    setResult(RESULT_OK, resultIntent)
-//                    finish()
-//                }
-//
-//                snackbar.show()
             }
         }
     }
