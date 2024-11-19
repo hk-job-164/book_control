@@ -9,9 +9,6 @@ import com.squareup.moshi.Moshi
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import java.io.IOException
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.*
 
 class BookInfoFetcher(
     private val context: Context,
@@ -24,8 +21,6 @@ class BookInfoFetcher(
             level = HttpLoggingInterceptor.Level.BODY
         })
         .build()
-
-    private val calendar = Calendar.getInstance()
 
     fun fetchBookInfo(isbn: String) {
         // キーボードを閉じる
