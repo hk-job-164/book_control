@@ -51,7 +51,7 @@ class BookInfoFetcher(
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 e.printStackTrace()
-                onFailure(context.getString(R.string.input_title))
+                onFailure(context.getString(R.string.failure))
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -63,7 +63,7 @@ class BookInfoFetcher(
                             val jsonAdapter = moshi.adapter(ApiResponse::class.java)
                             val results = jsonAdapter.fromJson(it)
                             if (results!!.items.isEmpty()) {
-                                onFailure(context.getString(R.string.failure))
+                                onFailure(context.getString(R.string.not_found))
                                 return
                             }
 

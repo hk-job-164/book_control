@@ -112,7 +112,7 @@ class BookAddActivity : AppCompatActivity() {
             this,
             binding,
             onFailure = {
-                Snackbar.make(binding.root, getString(R.string.failure), Snackbar.LENGTH_LONG)
+                Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG)
                     .show()
             },
             onSuccess = {

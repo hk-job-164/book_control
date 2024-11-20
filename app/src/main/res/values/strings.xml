@@ -18,7 +18,8 @@
     <string name="from_isbn">ISBNから自動入力</string>
     <string name="base_url">https://app.rakuten.co.jp/services/api/BooksTotal/Search/20170404</string>
     <string name="json">json</string>
-    <string name="failure">書籍情報の取得ができませんでした。</string>
+    <string name="failure">書籍情報の取得に失敗しました。</string>
+    <string name="not_found">書籍情報が見つかりませんでした。</string>
     <string name="from_camera">カメラから自動入力</string>
     <string name="please_select_date">日付を選択してください</string>
     <string name="isbn_hint">「-」ハイフンなどを除いた数字のみ13桁</string>
