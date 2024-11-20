@@ -27,6 +27,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="textUri"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
@@ -45,6 +46,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="text"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
@@ -64,6 +66,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="text"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
@@ -89,6 +92,7 @@
             android:autofillHints=""
             android:gravity="top"
             android:inputType="text"
+            android:maxLength="256"
             tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
 
         <ImageButton
@@ -118,6 +122,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="text"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
@@ -137,6 +142,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="number"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <TextView
@@ -156,6 +162,7 @@
         android:autofillHints=""
         android:gravity="top"
         android:inputType="text"
+        android:maxLength="256"
         tools:ignore="DuplicateSpeakableTextCheck,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
 
     <Button
