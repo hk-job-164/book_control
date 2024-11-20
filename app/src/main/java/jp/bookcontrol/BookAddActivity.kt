@@ -3,6 +3,7 @@ package jp.bookcontrol
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,10 @@ class BookAddActivity : AppCompatActivity() {
         if (result.resultCode == Activity.RESULT_OK && result.data != null) {
             getBookInfoFromIsbn(result.data!!.getStringExtra("isbn").toString())
         }
+    }
+
+    companion object {
+        private const val PERMISSIONS_REQUEST_CODE = 100
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,8 +78,32 @@ class BookAddActivity : AppCompatActivity() {
         }
 
         binding.fromCameraButton.setOnClickListener {
-            val intent = Intent(this, CameraViewActivity::class.java)
-            launcher.launch(intent)
+            if (checkSelfPermission(android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                val intent = Intent(this, CameraViewActivity::class.java)
+                launcher.launch(intent)
+            } else {
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.CAMERA),
+                    PERMISSIONS_REQUEST_CODE
+                )
+            }
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            PERMISSIONS_REQUEST_CODE -> {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    val intent = Intent(this, CameraViewActivity::class.java)
+                    launcher.launch(intent)
+                }
+                return
+            }
         }
     }
 
